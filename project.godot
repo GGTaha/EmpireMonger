@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="EmpireMonger"
+run/main_scene="uid://dea2kl0imdkqf"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -18,11 +19,16 @@ config/icon="res://icon.svg"
 
 RunState="*uid://csxfoohre43ux"
 GameConfig="*uid://gbr37mtjh4gh"
+GameClock="*uid://dewsvomxbitta"
+GameManager="*uid://tpfekuv18dcv"
+MetaProgress="*uid://nuyqnnx75j8i"
+EventBus="*uid://ge8l8ouc25ob"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor]
 
@@ -39,6 +45,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
