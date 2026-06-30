@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cyl3w7mpwlc5f"]
+
+[ext_resource type="Script" uid="uid://dc8ghonnhrm21" path="res://scripts/mine.gd" id="1_kqr42"]
+
+[node name="MineWindow" type="Panel" unique_id=499834375]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = 110.0
+offset_right = -440.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqr42")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=899132320]
+visible = false
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(2.5032542, 2.5032542, 2.5032542, 1)
+
+[node name="Close" type="Button" parent="." unique_id=382796035]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "X"
+
+[node name="Mine" type="Button" parent="." unique_id=2101198592]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.5
+offset_top = -29.5
+offset_right = 84.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Gold"
+
+[node name="Header" type="Label" parent="." unique_id=79595077]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.0
+offset_top = 5.0
+offset_right = 77.0
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Mines"
+
+[node name="Level" type="Label" parent="." unique_id=1381593229]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.5
+offset_top = 75.0
+offset_right = 53.5
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Level 0"
+
+[node name="Production" type="Label" parent="." unique_id=1075782430]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -28.0
+offset_right = 290.0
+offset_bottom = -5.0
+grow_vertical = 0
+text = "Passive Gold Production : 0 Gold/Day"
+
+[node name="Gold" type="Control" parent="." unique_id=1266387559]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GoldMineUpgrade" type="Button" parent="Gold" unique_id=1203891935]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 221.0
+offset_right = 338.0
+offset_bottom = 281.0
+theme_override_font_sizes/font_size = 36
+text = "^"
+
+[node name="GoldProgressBar" type="ProgressBar" parent="Gold" unique_id=789534032]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 282.0
+offset_right = 285.0
+offset_bottom = 292.0
+show_percentage = false
+
+[connection signal="pressed" from="Close" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Mine" to="." method="_on_mine_pressed"]
