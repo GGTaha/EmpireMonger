@@ -15,7 +15,7 @@ func NewDay():
 	var Year: int  = total_days / 360
 	var Month: int = (total_days % 360) / 30
 	var Day: int   = total_days % 30
-	#$".".text = str(Day) + " " + Months[Month] + ", " + str(Year) + " AE"
+	#$Calendar.text = str(Day) + " " + Months[Month] + ", " + str(Year) + " AE"
 	$Calendar.text = Months[Month] + ", " + str(Year) + " AE"
 
 func GoldChanged(amount):

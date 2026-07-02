@@ -112,5 +112,26 @@ offset_right = 285.0
 offset_bottom = 292.0
 show_percentage = false
 
+[node name="UpgradeSuccess" type="Label" parent="Gold" unique_id=517098804]
+visible = false
+layout_mode = 1
+offset_left = 90.0
+offset_top = 413.0
+offset_right = 315.0
+offset_bottom = 436.0
+text = "Insufficient Gold for Upgrade"
+
+[node name="Cost" type="Label" parent="Gold" unique_id=1825227220]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 276.0
+offset_right = 337.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 10
+text = "Cost : 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Close" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Mine" to="." method="_on_mine_pressed"]
+[connection signal="pressed" from="Gold/GoldMineUpgrade" to="." method="_on_gold_mine_upgrade_pressed"]

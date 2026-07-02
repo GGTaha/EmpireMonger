@@ -3,10 +3,11 @@ signal Tick
 signal NewDay
 signal AddGold(amount : int)
 signal SubtractGold(amount : int)
-signal GoldMineUpgraded(amount : int)
 signal GoldClicked()
 signal GoldProgressed()
-signal VisualiseGoldProgress()
+signal VisualiseGoldProgress(amount : int, wraps : int)
+signal GoldUpgradePressed()
+signal GoldUpgraded(amount : int, success : bool)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
