@@ -64,7 +64,10 @@ func UpgradeGold(amount: int,success : bool):
 		tween.tween_callback(func(): UpgradeLabel.visible = false)
 		$Level.text = "Level " + str(RunState.GoldMineLevel)
 		$Gold/Cost.text = "Cost : " + str(GameConfig.GoldMine.getUpgradeCost(RunState.GoldMineLevel))
-	var goldProduction : float = GameConfig.GoldMine.getPayout(RunState.GoldMineLevel)* (GameConfig.GoldMine.getProductionSpeed(RunState.GoldMineLevel)/100.0) * GameConfig.DayDuration
-	$Production.text = "Passive Gold Production : " + str(goldProduction) + " Gold/Day"
-		
+	var goldProduction : float = GameConfig.GoldMine.getPayout(RunState.GoldMineLevel)* (GameConfig.GoldMine.getProductionSpeed(RunState.GoldMineLevel)/100.0) * GameConfig.DayDuration * 30
+	RunState.GoldProduction = goldProduction
+	$Production.text = "Passive Gold Production : " + str(RunState.GoldProduction) + " Gold/Month"
+	EventBus.UpdateProdHud.emit()
+	
+	
 	

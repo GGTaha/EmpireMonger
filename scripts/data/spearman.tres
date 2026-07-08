@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TroopData" format=3 uid="uid://chc14vboop1e4"]
+
+[ext_resource type="Script" uid="uid://bfmlxtmifwv4i" path="res://scripts/data/TroopLevelData.gd" id="1_3p126"]
+[ext_resource type="Script" uid="uid://bmuqxaco3g37e" path="res://scripts/data/TroopData.gd" id="1_iq7ie"]
+
+[sub_resource type="Resource" id="Resource_c08e8"]
+script = ExtResource("1_3p126")
+Health = 5
+metadata/_custom_type_script = "uid://bfmlxtmifwv4i"
+
+[resource]
+script = ExtResource("1_iq7ie")
+TroopName = "Spearman"
+TroopDescription = "Man with spear"
+Upkeep = 1
+Cost = {
+"Bread": 3,
+"Gold": 3
+}
+LevelData = Array[ExtResource("1_3p126")]([SubResource("Resource_c08e8")])
+metadata/_custom_type_script = "uid://bmuqxaco3g37e"

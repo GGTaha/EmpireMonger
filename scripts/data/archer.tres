@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="TroopData" format=3 uid="uid://c8dl5687to2px"]
+
+[ext_resource type="Script" uid="uid://bfmlxtmifwv4i" path="res://scripts/data/TroopLevelData.gd" id="1_04vro"]
+[ext_resource type="Script" uid="uid://bmuqxaco3g37e" path="res://scripts/data/TroopData.gd" id="1_fck63"]
+
+[sub_resource type="Resource" id="Resource_82ayl"]
+script = ExtResource("1_04vro")
+Health = 3
+metadata/_custom_type_script = "uid://bfmlxtmifwv4i"
+
+[resource]
+script = ExtResource("1_fck63")
+TroopName = "Archer"
+TroopDescription = "bow shoot arrow"
+Upkeep = 1
+GarrisonLevel = 2
+Cost = {
+"Bread": 1,
+"Gold": 5
+}
+LevelData = Array[ExtResource("1_04vro")]([SubResource("Resource_82ayl")])
+metadata/_custom_type_script = "uid://bmuqxaco3g37e"

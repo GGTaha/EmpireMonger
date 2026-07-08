@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cyl3w7mpwlc5f"]
+[gd_scene format=3 uid="uid://cpt31brsaudbi"]
 
-[ext_resource type="Script" uid="uid://dc8ghonnhrm21" path="res://scripts/mine.gd" id="1_kqr42"]
+[ext_resource type="Script" uid="uid://6y3qncqpw7ej" path="res://scripts/farm.gd" id="1_kqr42"]
 
-[node name="MineWindow" type="Panel" unique_id=499834375]
+[node name="FarmWindow" type="Panel" unique_id=499834375]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -37,7 +37,7 @@ offset_bottom = 50.0
 grow_horizontal = 0
 text = "X"
 
-[node name="Mine" type="Button" parent="." unique_id=2101198592]
+[node name="Farm" type="Button" parent="." unique_id=2101198592]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,7 +50,8 @@ offset_right = 84.5
 offset_bottom = 30.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Gold"
+text = "Farm
+"
 
 [node name="Header" type="Label" parent="." unique_id=79595077]
 layout_mode = 1
@@ -63,7 +64,7 @@ offset_right = 77.0
 offset_bottom = 93.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
-text = "Mines"
+text = "Farms"
 
 [node name="Level" type="Label" parent="." unique_id=1381593229]
 layout_mode = 1
@@ -88,14 +89,14 @@ offset_top = -28.0
 offset_right = 290.0
 offset_bottom = -5.0
 grow_vertical = 0
-text = "Passive Gold Production : 0 Gold/Month"
+text = "Passive Bread Production : 0 Gold/Month"
 
-[node name="Gold" type="Control" parent="." unique_id=1266387559]
+[node name="Bread" type="Control" parent="." unique_id=1266387559]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GoldMineUpgrade" type="Button" parent="Gold" unique_id=1203891935]
+[node name="BreadFarmUpgrade" type="Button" parent="Bread" unique_id=1203891935]
 layout_mode = 0
 offset_left = 288.0
 offset_top = 221.0
@@ -104,7 +105,7 @@ offset_bottom = 281.0
 theme_override_font_sizes/font_size = 36
 text = "^"
 
-[node name="GoldProgressBar" type="ProgressBar" parent="Gold" unique_id=789534032]
+[node name="BreadProgressBar" type="ProgressBar" parent="Bread" unique_id=789534032]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 282.0
@@ -112,7 +113,7 @@ offset_right = 285.0
 offset_bottom = 292.0
 show_percentage = false
 
-[node name="UpgradeSuccess" type="Label" parent="Gold" unique_id=517098804]
+[node name="UpgradeSuccess" type="Label" parent="Bread" unique_id=517098804]
 visible = false
 layout_mode = 1
 offset_left = 90.0
@@ -121,7 +122,7 @@ offset_right = 315.0
 offset_bottom = 436.0
 text = "Insufficient Gold for Upgrade"
 
-[node name="Cost" type="Label" parent="Gold" unique_id=1825227220]
+[node name="Cost" type="Label" parent="Bread" unique_id=1825227220]
 layout_mode = 0
 offset_left = 288.0
 offset_top = 276.0
@@ -132,6 +133,6 @@ text = "Cost : 10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Close" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Mine" to="." method="_on_mine_pressed"]
-[connection signal="pressed" from="Gold/GoldMineUpgrade" to="." method="_on_gold_mine_upgrade_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Farm" to="." method="_on_farm_pressed"]
+[connection signal="pressed" from="Bread/BreadFarmUpgrade" to="." method="_on_bread_farm_upgrade_pressed"]
